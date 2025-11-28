@@ -1,26 +1,34 @@
+import { useNavigate } from "react-router-dom";
+import styles from "./hero.module.scss";
+
 export default function Hero() {
+  const navigate = useNavigate();
+
+  const handleBlivMedlemClick = () => navigate("/blivmedlem");
+  const handleKontaktOsClick = () => navigate("/kontaktos");
+
+
   return (
-    <section className="hero">
-      <div className="hero-left">
-        <img src="/player.png" alt="Football player" className="player-img" />
+    <section className={styles.hero}>
+      <div className={styles.gradientBG}></div>
+
+      <div className={styles.content}>
+        <h1 className={styles.title}>BLIV MEDLEM</h1>
+        <p className={styles.subtitle}>
+          Følg din passion. Lev spillet. Bliv en del af fællesskabet.
+        </p>
+        <div className={styles.buttons}>
+          <button className={styles.primaryBtn} onClick={handleBlivMedlemClick}>
+            BLIV MEDLEM
+          </button>
+          <button className={styles.secondaryBtn} onClick={handleKontaktOsClick}>
+            KONTAKT OS
+          </button>
+        </div>
       </div>
 
-      <div className="hero-content">
-        <h2>BLIV MEDLEM</h2>
-        <p>Tilmeld dig og bliv en del af vores fodboldfællesskab</p>
-
-        <div className="match">
-          <img src="/ballerzy-logo.png" alt="Ballerzy FC" />
-          <span>vs</span>
-          <img src="/arsenal.png" alt="Arsenal" />
-        </div>
-
-        <h3>APRIL 24</h3>
-
-        <div className="hero-buttons">
-          <button className="btn-outline">KONTAKT OS</button>
-          <button className="btn-primary">BLIV MEDLEM</button>
-        </div>
+      <div className={styles.heroVisual}>
+        <img src="src/assets/R.png" alt="Hero Visual" />
       </div>
     </section>
   );

@@ -1,0 +1,125 @@
+.kontaktSection {
+  width: 100%;
+  padding: 40px 20px;
+  background-color: #7a0d0d;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.header p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* Container for contact info, form, and visit */
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Contact Info */
+.contactInfo h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.contactInfo p {
+  margin-bottom: 6px;
+}
+
+.mapContainer {
+  width: 100%;
+  height: 220px;
+  margin: 12px 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.findLink {
+  display: inline-block;
+  margin-top: 8px;
+  color: #fff;
+  text-decoration: underline;
+}
+
+.findLink:hover {
+  color: #ff3b3b;
+}
+
+/* Contact Form */
+.contactForm h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.contactForm form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contactForm input,
+.contactForm textarea {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+}
+
+.contactForm button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #fff;
+  color: #7a0d0d;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.contactForm button:hover {
+  opacity: 0.8;
+}
+
+/* Visit Section */
+.visit h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.visit p {
+  font-size: 14px;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+/* Desktop Layout */
+@media (min-width: 768px) {
+  .infoContainer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .contactInfo,
+  .contactForm,
+  .visit {
+    flex: 1;
+  }
+
+  .contactForm {
+    max-width: 400px;
+  }
+}

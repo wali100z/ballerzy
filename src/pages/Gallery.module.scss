@@ -1,0 +1,73 @@
+/* ---- Wrapper ---- */
+.wrapper {
+  padding: 60px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+  animation: fadeIn 0.7s ease;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #ffffff;
+  margin-bottom: 40px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* ---- Masonry Grid ---- */
+.grid {
+  column-count: 4;
+  column-gap: 20px;
+  padding: 0 10px;
+}
+
+.grid img {
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 14px;
+  display: block;
+  object-fit: cover;
+  break-inside: avoid;
+  cursor: pointer;
+
+  /* ✨ Beautiful hover */
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+
+  &:hover {
+    transform: scale(1.04);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  }
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 1200px) {
+  .grid {
+    column-count: 3;
+  }
+}
+
+@media (max-width: 800px) {
+  .grid {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 500px) {
+  .grid {
+    column-count: 1;
+  }
+}
+
+/* ---- Fade In ---- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

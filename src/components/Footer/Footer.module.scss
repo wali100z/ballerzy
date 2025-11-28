@@ -1,0 +1,71 @@
+/* Premium Gradient Footer */
+.footer {
+  background: linear-gradient(135deg, #5e0a0a, #7a0d0d, #8f1212);
+  color: #fff;
+  padding: 60px 30px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+/* Layout Wrapper */
+.footerContainer {
+  max-width: 1300px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+/* Links Section */
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    color: #ffdd57;
+    transform: translateY(-2px);
+  }
+}
+
+/* Contact Section */
+.contact p {
+  margin: 4px 0;
+  opacity: 0.9;
+  font-size: 1rem;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+/* Line Divider + Copyright */
+.copyright {
+  margin-top: 40px;
+  padding-top: 20px;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  opacity: 0.8;
+  font-size: 0.95rem;
+}
+
+/* Desktop Layout */
+@media (min-width: 768px) {
+  .footerContainer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}

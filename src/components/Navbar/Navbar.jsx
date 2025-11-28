@@ -1,24 +1,34 @@
 import { useState } from "react";
-import MobileMenu from "./MobileMenu";
+import { Link } from "react-router-dom";
+import MobileMenu from "../MobileMenu/MobileMenu";
+import styles from "./navbar.module.scss"; 
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="navbar">
-      <div className="logo">ballerzy</div>
+    <header className={styles.navbar}>
+      {/* Logo */}
+      <div className={styles.logo}>ballerzy</div>
 
-      <nav className="nav-links">
-        <a href="/news">NYHEDER</a>
-        <a href="/member">BLIV MEDLEM</a>
-        <a href="/gallery">BILLEDER</a>
-        <a href="/teams">HOLD</a>
+      {/* Desktop nav links */}
+      <nav className={styles.navLinks}>
+        <Link to="/news">NYHEDER</Link>
+        <Link to="/member">BLIV MEDLEM</Link>
+        <Link to="/gallery">BILLEDER</Link>
+        <Link to="/teams">HOLD</Link>
       </nav>
 
-      <button className="hamburger" onClick={() => setOpen(true)}>
+      {/* Hamburger button (mobile only) */}
+      <button
+        className={styles.hamburger}
+        onClick={() => setOpen(true)}
+        aria-label="Open menu"
+      >
         ☰
       </button>
 
+      {/* Mobile menu panel */}
       <MobileMenu open={open} onClose={() => setOpen(false)} />
     </header>
   );
